@@ -1,0 +1,31 @@
+Esse projeto utiliza uma metodologia baseada no desenvolvimento funcional e iterativo, sem seguir uma estrutura rígida de padrões ou frameworks de organização de código, mas emprega boas práticas comuns no desenvolvimento com React Native e Expo.
+
+Principais características metodológicas:
+Arquitetura Simples e Funcional:
+
+A lógica de navegação e exibição de telas está concentrada no componente principal (App.js), utilizando a biblioteca @react-navigation.
+Cada funcionalidade é isolada em uma tela (componentes NovoAgendamento e AgendamentosFeitos).
+Gerenciamento Local de Estado:
+
+Usa o hook useState para armazenar e manipular dados, como os agendamentos e estados do componente.
+Não há uso de ferramentas de gerenciamento global de estado (por exemplo, Redux ou Context API), pois o escopo do estado é limitado a componentes específicos ou compartilhado via props entre telas.
+Comunicação entre Telas:
+
+A passagem de dados entre as telas é feita via parâmetros de navegação (route.params), o que funciona bem para aplicações menores, mas pode apresentar limitações em apps mais complexos.
+Boas práticas de reatividade e hooks:
+
+useEffect: Utilizado para reagir a mudanças nos parâmetros de navegação e atualizar o estado da tela de agendamentos.
+Modularização: Cada tela tem um propósito bem definido (agendamento ou listagem), tornando o código mais legível e fácil de manter.
+Validação de Dados:
+
+Validações simples, como verificar se o nome foi inserido ou se um horário já está ocupado, são implementadas diretamente no componente.
+Estilização Local:
+
+A estilização é feita inline, utilizando StyleSheet para cada componente, sem uso de bibliotecas externas como styled-components ou tailwind-rn.
+Metodologia de Desenvolvimento
+Embora o projeto não siga metodologias formais como MVC, MVVM, ou frameworks como Redux-Saga, ele demonstra uma abordagem prática e funcional:
+
+Iteratividade e Modularidade: Cada tela representa um módulo funcional.
+Navegação Tabulada: Fácil de entender e navegar para o usuário final.
+Foco na Simplicidade: Evita complexidades desnecessárias, mantendo o código conciso e direto ao ponto.
+Essa abordagem é excelente para projetos pequenos ou protótipos, mas, para escalar, seria interessante adotar ferramentas de gerenciamento de estado global e padrões arquiteturais mais robustos, como Clean Architecture ou Flux.
